@@ -23,6 +23,8 @@
 (require 'init-basic)
 (require 'init-basic-pkgs)
 (require 'init-program-pkgs)
+(require 'init-misc)
+
 
 
 

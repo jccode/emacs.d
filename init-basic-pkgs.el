@@ -1,3 +1,4 @@
+(require 'use-package)
 
 (use-package try
   :ensure t)
@@ -44,6 +45,8 @@
 	 ("M-X" . 'smex-major-mode-commands)
 	 ;; This is the old M-x
 	 ("C-c C-c M-x" . 'execute-extended-command)))
+
+
 
 
 (provide 'init-basic-pkgs)
