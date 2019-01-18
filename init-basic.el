@@ -26,27 +26,9 @@
 
 (electric-pair-mode 1)
 
+;; disable auto backup
+(setq make-backup-files nil)
 
-;; 
-;; Themes
-;; ====================
-
-;; (use-package monokai-theme
-;;   :ensure t
-;;   :config (load-theme 'monokai t))
-
-(use-package doom-themes
-  :ensure t
-  :config (load-theme 'doom-molokai t))
-
-
-;; Install the fonts by call:  M-x all-the-icons-install-fonts
-(use-package all-the-icons
-  :ensure t)
-
-(use-package doom-modeline
-  :ensure t
-  :hook (after-init . doom-modeline-init))
 
 
 ;;
@@ -58,6 +40,6 @@
 
 
 
-;; Export
 
+;; Export
 (provide 'init-basic)

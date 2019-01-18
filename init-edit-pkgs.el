@@ -39,6 +39,9 @@
   :ensure t
   :bind ("C-=" . 'er/expand-region))
 
+(use-package iedit
+  :ensure t)
+
 (use-package smex
   :ensure t
   :bind (("M-x" . 'smex)
@@ -48,5 +51,4 @@
 
 
 
-
-(provide 'init-basic-pkgs)
+(provide 'init-edit-pkgs)
