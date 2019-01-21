@@ -4,6 +4,9 @@
   :ensure t
   :bind ("C-x g" . magit-status))
 
+(use-package yasnippet-snippets
+  :ensure t)
+
 (use-package yaml-mode
   :ensure t)
 

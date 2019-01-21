@@ -33,4 +33,7 @@
   (if (file-readable-p f)
       (load-file f)))
 
-
+;; load all custom scripts
+(setq custom-dir (expand-file-name "user-customs" emacs-home))
+(when (file-exists-p custom-dir)
+  (mapc 'load (directory-files custom-dir t "^[^#].*el$")))

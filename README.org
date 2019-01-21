@@ -1,9 +1,8 @@
 
 * Emacs 
-** Move line up & down
-** Wrap region
+** DONE Move line up & down
 ** DONE Iedit, narrowing, widdening
-** User-custome.el
+** DONE User-custome.el
 ** DONE Projectlite / perspective
 ** Writeroom mode
 ** Org settings

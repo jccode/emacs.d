@@ -25,7 +25,10 @@
 (use-package yasnippet
   :ensure t
   :config
-  (yas-global-mode 1))
+  (progn
+    (add-to-list 'yas-snippet-dirs (expand-file-name "snippets" emacs-home))
+    (yas-global-mode 1)
+    ))
 
 (use-package multiple-cursors
   :ensure t
@@ -65,5 +68,16 @@
   :ensure t
   :bind ("C-x p ;" . 'projectile-persp-switch-project))
 
+;; move line up / down & duplicated line
+(use-package move-dup
+  :ensure t
+  :config
+  (global-move-dup-mode))
 
+(use-package writeroom-mode
+  :ensure t)
+
+
+
+;; exports
 (provide 'init-edit-pkgs)

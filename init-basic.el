@@ -1,4 +1,5 @@
 (require 'use-package)
+(require 'func-edit)
 
 ;; 
 ;; Basic settings
@@ -37,10 +38,10 @@
 ;; Custom functions
 ;; ====================
 
-;; duplicate line
-(global-set-key "\C-cd" "\C-a\C- \C-e\M-w\C-n\C-y")
+;; join line
+(global-set-key (kbd "C-c j") 'join-line)
 
-
+(global-set-key (kbd "M-Q") 'unfill-paragraph)
 
 
 ;; Export
