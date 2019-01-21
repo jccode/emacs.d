@@ -49,6 +49,21 @@
 	 ;; This is the old M-x
 	 ("C-c C-c M-x" . 'execute-extended-command)))
 
+(use-package perspective
+  :ensure t
+  :config
+  (persp-mode t))
+
+(use-package projectile
+  :ensure t
+  :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+  (projectile-mode +1))
+
+(use-package persp-projectile
+  :ensure t
+  :bind ("C-x p ;" . 'projectile-persp-switch-project))
 
 
 (provide 'init-edit-pkgs)

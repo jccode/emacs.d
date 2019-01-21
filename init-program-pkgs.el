@@ -4,6 +4,11 @@
   :ensure t
   :bind ("C-x g" . magit-status))
 
+(use-package yaml-mode
+  :ensure t)
+
+(use-package dockerfile-mode
+  :ensure t)
 
 
 (provide 'init-program-pkgs)

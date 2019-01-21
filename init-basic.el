@@ -29,6 +29,8 @@
 ;; disable auto backup
 (setq make-backup-files nil)
 
+;; set frame title
+(setq frame-title-format "%b - Emacs")
 
 
 ;;
