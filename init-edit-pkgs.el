@@ -77,6 +77,19 @@
 (use-package writeroom-mode
   :ensure t)
 
+(use-package switch-window
+  :ensure t
+  :bind ("C-x o" . switch-window))
+
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode))
+
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (global-aggressive-indent-mode 1))
 
 
 ;; exports

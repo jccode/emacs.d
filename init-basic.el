@@ -5,8 +5,11 @@
 ;; Basic settings
 ;; ====================
 
-;; No splash screen
-(setq inhibit-startup-message t)
+;; Default settings
+(setq inhibit-startup-message t  ; No splash screen
+      fill-column 120		 ; Width for line breaks
+      tab-width 4
+      )
 
 ;; Hide toolbar
 (tool-bar-mode -1)
@@ -32,6 +35,13 @@
 
 ;; set frame title
 (setq frame-title-format "%b - Emacs")
+
+;; Highlight current line
+(global-hl-line-mode)
+
+;; Default to utf-8 encoding
+(set-default-coding-systems 'utf-8)
+
 
 
 ;;

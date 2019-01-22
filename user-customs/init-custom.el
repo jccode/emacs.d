@@ -1,5 +1,10 @@
 (require 'use-package)
 
+;; Settings
+(setq user-full-name "jcchen"
+      user-mail-address "junchangchen@gmail.com")
+
+
 ;; Custom keymap
 (define-prefix-command 'ctrl-x-j-map)
 (global-set-key (kbd "C-x j") 'ctrl-x-j-map)
