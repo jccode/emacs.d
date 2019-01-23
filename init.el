@@ -15,7 +15,7 @@
 
 
 ;; Set up load path
-(setq emacs-home (expand-file-name ".")) ;~/emacs.d
+(setq emacs-home (expand-file-name "~/emacs")) ;
 (add-to-list 'load-path emacs-home)
 
 
