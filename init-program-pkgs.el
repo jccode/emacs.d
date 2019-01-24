@@ -20,4 +20,9 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package ledger-mode
+  :ensure t)
+
+
+
 (provide 'init-program-pkgs)

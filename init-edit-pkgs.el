@@ -91,6 +91,10 @@
   :config
   (global-aggressive-indent-mode 1))
 
+(use-package wrap-region
+  :ensure t
+  :config
+  (wrap-region-global-mode t))
 
 ;; exports
 (provide 'init-edit-pkgs)

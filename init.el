@@ -23,8 +23,15 @@
 (require 'init-basic)
 (require 'init-theme)
 (require 'init-edit-pkgs)
+(require 'init-org)
 (require 'init-program-pkgs)
 (require 'init-misc)
+
+
+;; Emacs server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 
 ;; Load use custom files
