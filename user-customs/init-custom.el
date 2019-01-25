@@ -1,4 +1,5 @@
 (require 'use-package)
+(require 'setup-common)
 
 ;; Settings
 (setq user-full-name "jcchen"
@@ -24,5 +25,4 @@
 	      ("c _" . string-inflection-underscore)
 	      ("c -" . string-inflection-kebab-case)
 	      ))
-
 

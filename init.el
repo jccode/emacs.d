@@ -19,6 +19,10 @@
 (add-to-list 'load-path emacs-home)
 
 
+;; Common setup
+(require 'setup-common)
+
+
 ;; Settings
 (require 'init-basic)
 (require 'init-theme)
@@ -34,11 +38,6 @@
   (server-start))
 
 
-;; Load use custom files
-(defun load-if-exist (f)
-  "load the elisp file only if it exists and is readable"
-  (if (file-readable-p f)
-      (load-file f)))
 
 ;; load all custom scripts
 (setq custom-dir (expand-file-name "user-customs" emacs-home))

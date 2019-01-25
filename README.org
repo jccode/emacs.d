@@ -2,9 +2,4 @@
 #+STARTUP: showall
 
 * Emacs 
-** DONE Move line up & down
-** DONE Iedit, narrowing, widdening
-** DONE User-custome.el
-** DONE Projectlite / perspective
-** DONE Writeroom mode
 ** Org settings

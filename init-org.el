@@ -1,13 +1,10 @@
 ;; org mode setup
+(require 'setup-common)
 
 ;; org mode basic key-bindings
-(global-set-key (kbd "C-c l") 'org-store-link)
+;; (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
-
-
-;; sync directory
-(setq sync-home (expand-file-name "~/ownCloud"))
 
 
 ;; Org settings
