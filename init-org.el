@@ -1,5 +1,8 @@
-;; org mode setup
+(require 'use-package)
 (require 'setup-common)
+
+;; Org mod setup
+
 
 ;; org mode basic key-bindings
 ;; (global-set-key (kbd "C-c l") 'org-store-link)
@@ -26,8 +29,8 @@
 	 "* %?\n%T" :prepend t)
 	("n" "Note" entry (file+headline org-default-notes-file "Notes")
 	 "* %u %? " :prepend t)
-	("l" "Link" entry (file+headline (expand-file-name "links.org" org-directory))
-	 "* %? %^L %^g \n%T")
+	("l" "Link" entry (file+headline (expand-file-name "links.org" org-directory) "Links")
+	 "* %? %^L %^g \n%T" :prepend t)
 	))
 
 
@@ -39,6 +42,45 @@
        (expand-file-name "gcal.org" org-directory)
        (expand-file-name "work/w.org" sync-home)
        ))
+
+
+;; Diary
+(setq diary-file (expand-file-name "diary" org-directory))
+
+
+
+;; 
+;; Org capture in new frame; close the frame once 'C-c C-c'
+;;
+;; To run active it, bind a OS hotkey to below command:
+;;    emacsclient -ne '(make-capture-frame)'
+;;
+;; For running emacs in windows docker container:
+;;    "docker exec -it emacs bash -c \"emacsclient -ne '(make-capture-frame)'\""
+;; 
+(use-package noflet
+  :ensure t )
+(defun make-capture-frame ()
+  "Create a new frame and run org-capture."
+  (interactive)
+  (make-frame '((name . "capture")))
+  (select-frame-by-name "capture")
+  (delete-other-windows)
+  (noflet ((switch-to-buffer-other-window (buf) (switch-to-buffer buf)))
+    (org-capture)))
+
+(defadvice org-capture-finalize 
+    (after delete-capture-frame activate)  
+  "Advise capture-finalize to close the frame"  
+  (if (equal "capture" (frame-parameter nil 'name))  
+      (delete-frame)))
+
+(defadvice org-capture-destroy 
+    (after delete-capture-frame activate)  
+  "Advise capture-destroy to close the frame"  
+  (if (equal "capture" (frame-parameter nil 'name))  
+      (delete-frame)))  
+
 
 
 ;; export

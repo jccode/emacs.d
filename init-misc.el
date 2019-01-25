@@ -10,5 +10,10 @@
   :config
   (beacon-mode 1))
 
+;; chinese fonts
+(use-package cnfonts
+  :ensure t)
+
+
 
 (provide 'init-misc)
