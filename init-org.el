@@ -16,20 +16,21 @@
 
 
 ;; Capture
+(setq org-file-work (expand-file-name "work/w.org" sync-home))
 (setq org-capture-templates
       '(("t" "Task" entry (file+headline org-default-notes-file "Tasks")
 	 "* TODO %?\n %i\n %a" :prepend t)
-	("w" "Work" entry (file+datetree (expand-file-name "work/w.org" sync-home))
+	("w" "Work" entry (file+olp+datetree org-file-work)
 	 "* TODO %?\n%i" :tree-type week :prepend t :clock-in t :clock-keep t)
-	("j" "Journal" entry (file+datetree (expand-file-name "journal.org" org-directory))
+	("j" "Journal" entry (file+olp+datetree "journal.org")
 	 "* %U %?")
-	("a" "Appointment" entry (file (expand-file-name "gcal.org" org-directory))
+	("a" "Appointment" entry (file "gcal.org")
 	 "* %?\n\n%^T\n\n:PROPERTIES:\n\n:END:\n\n")
 	("i" "Idea" entry (file+headline org-default-notes-file "Ideas")
 	 "* %?\n%T" :prepend t)
 	("n" "Note" entry (file+headline org-default-notes-file "Notes")
 	 "* %u %? " :prepend t)
-	("l" "Link" entry (file+headline (expand-file-name "links.org" org-directory) "Links")
+	("l" "Link" entry (file+headline "links.org" "Links")
 	 "* %? %^L %^g \n%T" :prepend t)
 	))
 
