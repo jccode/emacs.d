@@ -20,9 +20,9 @@
 (setq org-capture-templates
       '(("t" "Task" entry (file+headline org-default-notes-file "Tasks")
 	 "* TODO %?\n %i\n %a" :prepend t)
-	("w" "Work" entry (file+olp+datetree org-file-work)
+	("w" "Work" entry (file+datetree org-file-work)
 	 "* TODO %?\n%i" :tree-type week :prepend t :clock-in t :clock-keep t)
-	("j" "Journal" entry (file+olp+datetree "journal.org")
+	("j" "Journal" entry (file+datetree "journal.org")
 	 "* %U %?")
 	("a" "Appointment" entry (file "gcal.org")
 	 "* %?\n\n%^T\n\n:PROPERTIES:\n\n:END:\n\n")
@@ -81,6 +81,7 @@
   "Advise capture-destroy to close the frame"  
   (if (equal "capture" (frame-parameter nil 'name))  
       (delete-frame)))  
+
 
 
 

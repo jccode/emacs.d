@@ -23,6 +23,8 @@
 (use-package ledger-mode
   :ensure t)
 
+(use-package ahk-mode
+  :ensure t)
 
 
 (provide 'init-program-pkgs)

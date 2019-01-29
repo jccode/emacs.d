@@ -42,6 +42,7 @@
 ;; Default to utf-8 encoding
 (set-default-coding-systems 'utf-8)
 
+(global-visual-line-mode t)
 
 
 ;;
