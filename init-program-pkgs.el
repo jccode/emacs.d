@@ -26,5 +26,7 @@
 (use-package ahk-mode
   :ensure t)
 
+(use-package restclient
+  :ensure t)
 
 (provide 'init-program-pkgs)
