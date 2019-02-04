@@ -15,19 +15,14 @@
 (use-package cnfonts
   :ensure t)
 
-
-;; elfeeds
-(use-package elfeed
-  :ensure t
-  :bind ("C-x w" . 'elfeed)
-  )
-
-(use-package elfeed-org
+;; exec path
+(use-package exec-path-from-shell
   :ensure t
   :config
-  (elfeed-org)
-  (setq rmh-elfeed-org-files (list (expand-file-name "org/elfeed.org" sync-home))))
+  (exec-path-from-shell-initialize))
 
+;; elfeed
+(require 'setup-elfeed)
 
 
 (provide 'init-misc)
