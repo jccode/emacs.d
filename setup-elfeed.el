@@ -25,6 +25,9 @@
 ;;   :config
 ;;   (elfeed-goodies/setup))
 
+(define-key elfeed-show-mode-map (kbd "j") 'next-line)
+(define-key elfeed-show-mode-map (kbd "k") 'previous-line)
+
 ;; (define-key elfeed-show-mode-map (kbd "j") 'elfeed-goodies/split-show-next)
 ;; (define-key elfeed-show-mode-map (kbd "k") 'elfeed-goodies/split-show-prev)
 

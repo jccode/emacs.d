@@ -49,6 +49,15 @@
 (setq diary-file (expand-file-name "diary" org-directory))
 
 
+;; org-mode bable language
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((R . t)
+   (ditaa . t)
+   (ledger . t)
+   (python . t)
+   (latex . t)))
+
 
 ;; 
 ;; Org capture in new frame; close the frame once 'C-c C-c'
