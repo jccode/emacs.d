@@ -93,6 +93,13 @@
 
 
 
+;; Unset key bindings
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-unset-key (kbd "C-c SPC")) ;; conflict with AceJump
+	    ))
+
+
 
 ;; export
 (provide 'init-org)
