@@ -29,4 +29,10 @@
 (use-package restclient
   :ensure t)
 
+
+;; scala
+;; (use-package ensime
+;;   :ensure t)
+
+
 (provide 'init-program-pkgs)
