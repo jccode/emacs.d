@@ -30,7 +30,8 @@
   "do operate on the letter by fn(add/subtract a number)."
   (cond ((p-number letter) (op-number letter num fn))
         ((p-lower-letter letter) (op-lower-letter letter num fn))
-        ((p-upper-letter letter) (op-upper-letter letter num fn))))
+        ((p-upper-letter letter) (op-upper-letter letter num fn))
+	((p-symbol letter) (op-symbol letter num fn))))
 
 (defun p-number (num)
   "detect a ascii-num is a number"
@@ -43,6 +44,10 @@
 (defun p-upper-letter(num)
   "detect a ascii-num is a upper letter"
   (and (>= num 65) (<= num 90)))
+
+(defun p-symbol (num)
+  "detect a ascii-num is a symbol"
+  (or (and (>= num 33) (<= num 47)) (and (>= num 58) (<= num 64))))
 
 (defun op-number (num operand fn)
   "apply fn on num with operand"
@@ -58,11 +63,26 @@
 
 (defun op-char-with-range (char operand fn min max) 
   "apply fn on char. char's range is from min to max"
-    (let ((ret (funcall fn char operand))
+  (let ((ret (funcall fn char operand))
         (range (1+ (- max min))))
     (cond ((< ret min) (setq ret (+ ret range)))
           ((> ret max) (setq ret (- ret range))))
     ret))
+
+
+(defun op-char-with-range2 (char operand fn min1 max1 min2 max2) 
+  "apply fn on char. char's range is from min1 to max1, min2 to max2"
+  (let ((ret (funcall fn char operand)))
+    (cond ((< ret min1) (setq ret (1+ (- max2 (- min1 ret)))))
+	  ((and (> ret max1) (< ret min2)) (setq ret (+ (- min2 1) (- ret max1))))
+	  ((> ret max2) (setq ret (+ (- min1 1) (- ret max2))))
+	  )
+    ret))
+
+(defun op-symbol (num operand fn)
+  "apply fn on symbol with operand"
+  (op-char-with-range2 num operand fn 33 47 58 64))
+
 
 (defun number-to-char (num)
   "number to ascii-num"
