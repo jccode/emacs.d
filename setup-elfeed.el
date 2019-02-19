@@ -36,5 +36,8 @@
   :ensure t)
 
 
+;; curl proxy setup
+;; (setf elfeed-curl-extra-arguments '("--socks5-hostname" "10.0.126.81:1080"))
+
 
 (provide 'setup-elfeed)
