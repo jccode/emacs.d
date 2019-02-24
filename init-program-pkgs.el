@@ -34,5 +34,9 @@
 ;; (use-package ensime
 ;;   :ensure t)
 
+;; haskell
+;; (use-package haskell-mode
+;;   :ensure t)
+
 
 (provide 'init-program-pkgs)
