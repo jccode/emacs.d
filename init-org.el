@@ -101,5 +101,9 @@
 
 
 
+;; emacs encrypt settings
+(require 'setup-org-epa)
+
+
 ;; export
 (provide 'init-org)
