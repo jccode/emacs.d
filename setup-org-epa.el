@@ -5,7 +5,15 @@
 ;; 
 
 ;; (require 'epa-file)
-;; (epa-file-enable)
+;; (epa-file-enable)  ; default behavior
+
+;; Control whether or not to pop up the key selection dialog.
+(setq epa-file-select-keys 0)
+
+;; ask encryption password once
+(setq epa-file-cache-passphrase-for-symmetric-encryption t)
+
+
 
 
 
@@ -22,7 +30,7 @@
 
 (require 'epa)
 (setq epa-pinentry-mode 'loopback)
-(setq epa-file-select-keys 0)
+
 
 (use-package pinentry
   :ensure t
@@ -32,6 +40,7 @@
 ;; Issue for epg not running
 ;; Ref: http://emacs.1067599.n8.nabble.com/23-0-60-EasyPG-and-OpenPGP-smartcard-process-epg-not-running-td181029.html
 (setq epg-gpg-minimum-version "100")
+
 
 
 
@@ -51,10 +60,6 @@
 ;; Either the Key ID or set to nil to use symmetric encryption.
 ;; (setq org-crypt-key nil)
 (setq org-crypt-key "junchangchen@gmail.com")
-
-;; ask encryption password once
-(setq epa-file-cache-passphrase-for-symmetric-encryption t)
-
 
 
 
