@@ -71,6 +71,7 @@
 ;; move line up / down & duplicated line
 (use-package move-dup
   :ensure t
+  :bind ("C-c d". md/duplicate-down)  
   :config
   (global-move-dup-mode))
 
