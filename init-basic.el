@@ -42,7 +42,20 @@
 ;; Default to utf-8 encoding
 (set-default-coding-systems 'utf-8)
 
+
+;; 
+;; Soft wrapping in emacs
+;; 
+(setq-default fill-column 120)
+
 (global-visual-line-mode t)
+
+;; turn on visual-fill-column-mode when visual-line-mode active.
+(add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+
+;; visual-fill-column-mode setup
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+
 
 
 ;;
