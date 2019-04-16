@@ -45,6 +45,10 @@
 ;; (use-package haskell-mode
 ;;   :ensure t)
 
+(use-package emmet-mode
+  :ensure t
+  :hook (mhtml-mode css-mode))
+
 
 ;; python
 (setq py-python-command "python3")
