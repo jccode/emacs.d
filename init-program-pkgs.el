@@ -29,14 +29,26 @@
 (use-package restclient
   :ensure t)
 
+;; flycheck
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+
 
 ;; scala
 ;; (use-package ensime
 ;;   :ensure t)
 
+
 ;; haskell
 ;; (use-package haskell-mode
 ;;   :ensure t)
+
+
+;; python
+(setq py-python-command "python3")
+(setq python-shell-interpreter "python3")
 
 
 (provide 'init-program-pkgs)
