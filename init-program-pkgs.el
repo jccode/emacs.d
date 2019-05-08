@@ -58,7 +58,12 @@
 ;; common-lisp
 (use-package slime
   :ensure t
-  :config (setq inferior-lisp-program "/usr/local/bin/ccl"))
+  :config
+  (progn
+    (setq inferior-lisp-program "/usr/local/bin/ccl")
+    ;; contrib
+    (add-to-list 'slime-contribs 'slime-repl)
+    ))
 
 
 (provide 'init-program-pkgs)
