@@ -55,4 +55,10 @@
 (setq python-shell-interpreter "python3")
 
 
+;; common-lisp
+(use-package slime
+  :ensure t
+  :config (setq inferior-lisp-program "/usr/local/bin/ccl"))
+
+
 (provide 'init-program-pkgs)
