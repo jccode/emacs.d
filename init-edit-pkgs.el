@@ -16,6 +16,16 @@
     (global-auto-complete-mode t)
     ))
 
+(use-package visual-fill-column
+  :ensure t
+  :config
+  (progn
+    ;; turn on visual-fill-column-mode when visual-line-mode active.
+    (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+    ;; visual-fill-column-mode setup
+    (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+    ))
+
 (use-package ace-jump-mode
   :ensure t
   :bind (("C-c SPC" . 'ace-jump-mode)
