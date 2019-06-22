@@ -24,5 +24,9 @@
 ;; elfeed
 (require 'setup-elfeed)
 
+;; htmlize
+(use-package htmlize
+  :ensure t)
+
 
 (provide 'init-misc)
