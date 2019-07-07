@@ -42,6 +42,8 @@
 ;; Default to utf-8 encoding
 (set-default-coding-systems 'utf-8)
 
+;; quiet, please! No dinging!
+(setq ring-bell-function 'ignore)
 
 ;; 
 ;; Soft wrapping in emacs
