@@ -86,7 +86,9 @@
   (global-move-dup-mode))
 
 (use-package writeroom-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq writeroom-width 0.7))
 
 (use-package switch-window
   :ensure t
@@ -106,6 +108,7 @@
   :ensure t
   :config
   (wrap-region-global-mode t))
+
 
 ;; exports
 (provide 'init-edit-pkgs)
