@@ -16,7 +16,6 @@
   :ensure t)
 
 ;; chinese input method
-(setq package-check-signature nil)
 (use-package pyim
   :ensure t
   ;; :demand t
