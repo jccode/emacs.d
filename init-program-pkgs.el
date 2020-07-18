@@ -36,11 +36,6 @@
 ;;   (global-flycheck-mode t))
 
 
-;; scala
-;; (use-package ensime
-;;   :ensure t)
-
-
 ;; haskell
 ;; (use-package haskell-mode
 ;;   :ensure t
@@ -74,6 +69,41 @@
     ;; contrib
     (add-to-list 'slime-contribs 'slime-repl)
     ))
+
+
+;; scala
+;; (use-package ensime
+;;   :ensure t)
+
+(defun setup-scala ()
+  "scala setup"
+
+  ;; Enable scala-mode and sbt-mode
+  (use-package scala-mode
+    :mode "\\.s\\(cala\\|bt\\)$")
+
+  (use-package sbt-mode
+    :commands sbt-start sbt-command
+    :config
+    ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
+    ;; allows using SPACE when in the minibuffer
+    (substitute-key-definition
+     'minibuffer-complete-word
+     'self-insert-command
+     minibuffer-local-completion-map)
+    ;; sbt-supershell kills sbt-mode:  https://github.com/hvesalai/emacs-sbt-mode/issues/152
+    (setq sbt:program-options '("-Dsbt.supershell=false"))
+    )
+
+  (use-package lsp-mode
+    ;; Optional - enable lsp-mode automatically in scala files
+    :hook (scala-mode . lsp)
+    :config (setq lsp-prefer-flymake nil))
+
+  (use-package lsp-ui)
+  (use-package company-lsp))
+
+;; (setup-scala)
 
 
 (provide 'init-program-pkgs)

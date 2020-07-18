@@ -22,7 +22,7 @@
 	 "* TODO %?\n %i\n %a" :prepend t)
 	("w" "Work" entry (file+datetree org-file-work)
 	 "* TODO %?\n%i" :tree-type week :prepend t :clock-in t :clock-keep t)
-	("j" "Journal" entry (file+datetree "journal.org")
+	("j" "Journal" entry (file+datetree "journal.org.gpg")
 	 "* %U %?")
 	("a" "Appointment" entry (file "gcal.org")
 	 "* %?\n\n%^T\n\n:PROPERTIES:\n\n:END:\n\n")
