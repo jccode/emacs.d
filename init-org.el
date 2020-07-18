@@ -13,6 +13,7 @@
 ;; Org settings
 (setq org-directory (expand-file-name "org" sync-home))
 (setq org-default-notes-file (expand-file-name "note.org" org-directory))
+(setq org-vocabulary-file (expand-file-name "vocabulary.org" org-directory))
 
 
 ;; Capture
@@ -32,7 +33,10 @@
 	 "* %u %? " :prepend t)
 	("l" "Link" entry (file+headline "links.org" "Links")
 	 "* %? %^L %^g \n%T" :prepend t)
+	("v" "Vocabulary" entry (file+headline org-vocabulary-file "Vocabulary")
+	 "* %?\n%u" :prepend t :empty-lines 1)
 	))
+
 
 
 ;; Agenda
