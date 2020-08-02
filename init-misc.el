@@ -29,10 +29,11 @@
 
 
 ;; exec path
-(use-package exec-path-from-shell
-  :ensure t
-  :config
-  (exec-path-from-shell-initialize))
+(when (not (eq system-type 'windows-nt))
+  (use-package exec-path-from-shell
+    :ensure t
+    :config
+    (exec-path-from-shell-initialize)))
 
 ;; elfeed
 (require 'setup-elfeed)
