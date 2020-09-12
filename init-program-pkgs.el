@@ -71,6 +71,12 @@
     ))
 
 
+;; sql indent
+(use-package sql-indent
+  :ensure t
+  :hook (sql-mode . sqlind-minor-mode))
+
+
 ;; scala
 ;; (use-package ensime
 ;;   :ensure t)
