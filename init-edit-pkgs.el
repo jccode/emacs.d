@@ -88,7 +88,8 @@
 (use-package writeroom-mode
   :ensure t
   :config
-  (setq writeroom-width 0.7))
+  ;; (setq writeroom-width 0.5))
+  (setq writeroom-width 100))
 
 (use-package switch-window
   :ensure t

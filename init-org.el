@@ -108,6 +108,9 @@
 ;; emacs encrypt settings
 (require 'setup-org-epa)
 
+;; org-pomodoro
+(use-package org-pomodoro
+  :ensure t)
 
 ;; export
 (provide 'init-org)
