@@ -13,6 +13,7 @@
 ;; Custom keybinds
 (define-key ctrl-x-j-map (kbd "p e") 'encrypt-password)
 (define-key ctrl-x-j-map (kbd "p d") 'decrypt-password)
+(define-key ctrl-x-j-map (kbd "p g") 'gen-password)
 (define-key ctrl-x-j-map (kbd "b e") 'base64-encode-region)
 (define-key ctrl-x-j-map (kbd "b d") 'base64-decode-region)
 
