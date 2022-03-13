@@ -72,6 +72,7 @@
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+  (add-to-list 'projectile-globally-ignored-directories "node_modules")
   (projectile-mode +1))
 
 (use-package persp-projectile

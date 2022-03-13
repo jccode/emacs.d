@@ -57,6 +57,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)
+   (shell . t)
    (ditaa . t)
    (ledger . t)
    (python . t)

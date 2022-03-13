@@ -54,6 +54,10 @@
   :ensure t
   :hook (mhtml-mode css-mode))
 
+;; js,css indent settings
+(setq js-indent-level 2)
+(setq css-indent-offset 2)
+
 
 ;; python
 (setq py-python-command "python3")
