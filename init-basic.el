@@ -52,6 +52,7 @@
 
 (global-visual-line-mode t)
 
+(set-language-environment "UTF-8")
 
 ;;
 ;; Custom functions
