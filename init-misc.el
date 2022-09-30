@@ -25,7 +25,11 @@
     :config (pyim-wbdict-v98-enable))
   (setq default-input-method "pyim")
   (setq pyim-default-scheme 'wubi)
-  (setq pyim-page-length 5))
+  (setq pyim-page-length 5)
+  (pyim-basedict-enable)
+  (use-package posframe
+    :ensure t)
+  (setq pyim-page-tooltip 'posframe))
 
 
 ;; exec path
