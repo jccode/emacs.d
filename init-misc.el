@@ -27,6 +27,7 @@
   (setq pyim-default-scheme 'wubi)
   (setq pyim-page-length 5)
   (pyim-basedict-enable)
+  (setq-default pyim-punctuation-translate-p '(no)) ;半角符号
   (use-package posframe
     :ensure t)
   (setq pyim-page-tooltip 'posframe))
