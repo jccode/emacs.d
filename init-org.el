@@ -52,6 +52,10 @@
 ;; Diary
 (setq diary-file (expand-file-name "diary" org-directory))
 
+;; plantuml
+(add-to-list 
+ 'org-src-lang-modes
+ '("plantuml" . plantuml))
 
 ;; org-mode bable language
 (org-babel-do-load-languages
@@ -61,6 +65,7 @@
    (ditaa . t)
    (ledger . t)
    (python . t)
+   (plantuml . t)
    (latex . t)))
 
 

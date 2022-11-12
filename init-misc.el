@@ -19,6 +19,7 @@
 (use-package pyim
   :ensure t
   ;; :demand t
+  :bind ("C-." . pyim-toggle-input-ascii)
   :config
   (use-package pyim-wbdict
     :ensure t
