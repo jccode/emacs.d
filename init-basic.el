@@ -8,7 +8,7 @@
 ;; Default settings
 (setq inhibit-startup-message t  ; No splash screen
       fill-column 120		 ; Width for line breaks
-      tab-width 4
+      tab-width 2
       )
 
 ;; Hide toolbar
@@ -52,6 +52,7 @@
 
 (global-visual-line-mode t)
 
+(set-language-environment "UTF-8")
 
 ;;
 ;; Custom functions

@@ -54,6 +54,10 @@
   :ensure t
   :hook (mhtml-mode css-mode))
 
+;; js,css indent settings
+(setq js-indent-level 2)
+(setq css-indent-offset 2)
+
 
 ;; python
 (setq py-python-command "python3")
@@ -75,6 +79,15 @@
 (use-package sql-indent
   :ensure t
   :hook (sql-mode . sqlind-minor-mode))
+
+;; plantuml
+(use-package plantuml-mode
+  :ensure t
+  :config
+  (setq org-plantuml-jar-path
+	(expand-file-name "emacs/plantuml-1.2022.12.jar" sync-home))
+  (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode)))
+
 
 
 ;; scala

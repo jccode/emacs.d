@@ -27,8 +27,8 @@
 (require 'init-basic)
 (require 'init-theme)
 (require 'init-edit-pkgs)
-(require 'init-org)
 (require 'init-program-pkgs)
+(require 'init-org)
 (require 'init-misc)
 
 
