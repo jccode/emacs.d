@@ -111,5 +111,20 @@
 
 ;; (setup-scala)
 
+;; rust
+(use-package rust-mode
+  :ensure t
+  :init
+  (add-hook 'rust-mode-hook
+	    (lambda () (setq indent-tabs-mode nil)))
+  :config
+  (setq rust-format-on-save t)
+  :bind ("C-c C-c" . 'rust-run))
+
+
+(use-package lua-mode
+  :ensure t
+  :mode "\\.lua$"
+  :interpreter "lua")
 
 (provide 'init-program-pkgs)

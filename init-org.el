@@ -60,7 +60,10 @@
    (ditaa . t)
    (ledger . t)
    (python . t)
+   (java . t)
    (latex . t)))
+
+(require 'org-tempo)
 
 
 ;; 
