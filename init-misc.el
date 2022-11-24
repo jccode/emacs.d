@@ -34,6 +34,8 @@
     :ensure t)
   (setq pyim-page-tooltip 'posframe))
 
+
+
 ;; exec path
 (when (not (eq system-type 'windows-nt))
   (use-package exec-path-from-shell

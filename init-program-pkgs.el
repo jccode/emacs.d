@@ -84,10 +84,13 @@
 (use-package plantuml-mode
   :ensure t
   :config
-  (setq org-plantuml-jar-path
-	(expand-file-name "emacs/plantuml-1.2022.12.jar" sync-home))
+  (setq jar-file (expand-file-name "emacs/plantuml-1.2022.12.jar" sync-home))
+  (setq plantuml-jar-path jar-file)
+  (setq plantuml-default-exec-mode 'jar)
+  (setq org-plantuml-jar-path jar-file)
+  ;; (setq org-plantuml-jar-path
+  ;; 	(expand-file-name "emacs/plantuml-1.2022.12.jar" sync-home))
   (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode)))
-
 
 
 ;; scala
