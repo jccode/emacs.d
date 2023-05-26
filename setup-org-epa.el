@@ -122,8 +122,9 @@
 ;; Using method 1 by default; unless in docker container
 ;; 
 ;; Because method 1 not work perfectly in docker container.
-;; 
-(if (getenv "INSIDE_DOCKER") (setup-gpg-minibuffer-2) (setup-gpg-minibuffer-1))
+;;
+
+;; (if (getenv "INSIDE_DOCKER") (setup-gpg-minibuffer-2) (setup-gpg-minibuffer-1))
 
 
 

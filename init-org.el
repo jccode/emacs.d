@@ -63,7 +63,7 @@
  '((R . t)
    (shell . t)
    (ditaa . t)
-   (ledger . t)
+   ;; (ledger . t)
    (python . t)
    (java . t)
    (plantuml . t)

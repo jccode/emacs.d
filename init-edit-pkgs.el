@@ -64,6 +64,8 @@
 
 (use-package perspective
   :ensure t
+  :custom
+  (persp-mode-prefix-key (kbd "C-c x"))
   :config
   (persp-mode t))
 
@@ -73,6 +75,7 @@
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
   (add-to-list 'projectile-globally-ignored-directories "node_modules")
+  (add-to-list 'projectile-globally-ignored-file-suffixes "~undo-tree~")
   (projectile-mode +1))
 
 (use-package persp-projectile
@@ -82,7 +85,7 @@
 ;; move line up / down & duplicated line
 (use-package move-dup
   :ensure t
-  :bind ("C-c d". md/duplicate-down)  
+  :bind ("C-c d". move-dup-duplicate-down)
   :config
   (global-move-dup-mode))
 
