@@ -6,7 +6,7 @@
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/"))
-(package-initialize)
+;; (package-initialize)
 
 ;; Bootstrap `use-package`
 (unless (package-installed-p 'use-package)

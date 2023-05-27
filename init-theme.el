@@ -27,13 +27,18 @@
 ;;   :ensure t
 ;;   :config (load-theme 'monokai t))
 
+;; setup a connection proxy for download from github.
+;; (setq url-proxy-services
+;;       '(("http"     . "localhost:7890")
+;; 	("https"     . "localhost:7890")
+;;         ))
 
 (defun setup-doom-themes-modeline ()
   "Setup doom themes and doom modeline. 
 To ensure doom-modeline works properly, you should manually call
 
   M-x all-the-icons-install-fonts
-  M-x nerd-icons-install-fonts
+  M-x xnerd-icons-install-fonts
 
 to install the necessary icon fonts"
 
