@@ -66,6 +66,9 @@
 ;;   (setq-default adaptive-wrap-extra-indent 2)
 ;;   :hook (visual-line-mode . adaptive-wrap-prefix-mode))
 
+(use-package pangu-spacing
+  :ensure t
+  :config (global-pangu-spacing-mode 1))
 
 (set-language-environment "UTF-8")
 
