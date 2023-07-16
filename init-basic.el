@@ -52,7 +52,27 @@
 
 (global-visual-line-mode t)
 
+(use-package visual-fill-column
+  :ensure t
+  :hook (visual-line-mode . visual-fill-column-mode))
+
+;; fixed wrapping lines in visually
+;; ref: https://github.com/hick/emacs-chinese/issues/9
+(setq word-wrap-by-category t)
+
+;; (use-package adaptive-wrap
+;;   :ensure t
+;;   :config
+;;   (setq-default adaptive-wrap-extra-indent 2)
+;;   :hook (visual-line-mode . adaptive-wrap-prefix-mode))
+
+
 (set-language-environment "UTF-8")
+
+;; chinese font
+(use-package cnfonts
+  :ensure t
+  :config (cnfonts-mode 1))
 
 ;;
 ;; Custom functions

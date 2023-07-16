@@ -99,10 +99,10 @@
   :ensure t
   :bind ("C-x o" . switch-window))
 
-(use-package undo-tree
-  :ensure t
-  :config
-  (global-undo-tree-mode))
+;; (use-package undo-tree
+;;   :ensure t
+;;   :config
+;;   (global-undo-tree-mode))
 
 (use-package aggressive-indent
   :ensure t

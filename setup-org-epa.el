@@ -80,7 +80,6 @@
   (require 'epa)
   (setq epa-pinentry-mode 'loopback)
 
-
   (use-package pinentry
     :ensure t
     :config
@@ -88,7 +87,7 @@
 
   ;; Issue for epg not running
   ;; Ref: http://emacs.1067599.n8.nabble.com/23-0-60-EasyPG-and-OpenPGP-smartcard-process-epg-not-running-td181029.html
-  (setq epg-gpg-minimum-version "100")
+  ;; (setq epg-gpg-minimum-version "100")
 
   )
 
@@ -126,7 +125,7 @@
 
 ;; (if (getenv "INSIDE_DOCKER") (setup-gpg-minibuffer-2) (setup-gpg-minibuffer-1))
 
-
+(setup-gpg-minibuffer-1)
 
 
 (provide 'setup-org-epa)
