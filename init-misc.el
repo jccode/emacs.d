@@ -67,20 +67,34 @@
   ;;  ((text-mode prog-mode) . sis-inline-mode))
 
   :config
+
+  (let ((is-windows (eq system-type 'windows-nt))
+	(is-macos (eq system-type 'darwin)))
+    (if is-windows (sis-ism-lazyman-config nil t 'w32))
+    (if is-macos (sis-ism-lazyman-config
+		  ;; English input source may be: "ABC", "US" or another one.
+		  "com.apple.keylayout.ABC"
+		  ;; "com.apple.keylayout.US"
+
+		  ;; Other language input source: "rime", "sogou" or another one.
+		  ;; "im.rime.inputmethod.Squirrel.Rime"
+		  ;; "com.sogou.inputmethod.sogou.pinyin"
+		  "com.apple.inputmethod.SCIM.WBX")))
+  
   ;; ;; For MacOS
   ;; (sis-ism-lazyman-config
 
   ;;  ;; English input source may be: "ABC", "US" or another one.
-  ;;  ;; "com.apple.keylayout.ABC"
-  ;;  "com.apple.keylayout.US"
+  ;;  "com.apple.keylayout.ABC"
+  ;;  ;; "com.apple.keylayout.US"
 
   ;;  ;; Other language input source: "rime", "sogou" or another one.
-  ;;  ;; "im.rime.inputmethod.Squirrel.Rime"
-  ;;  "com.sogou.inputmethod.sogou.pinyin")
-
-  ;; windows
+  ;;  ;; "com.sogou.inputmethod.sogou.pinyin"
+  ;;  "com.apple.inputmethod.SCIM.WBX")
+  
+  ;; For windows
   ;; (sis-ism-lazyman-config "1033" "2052" 'im-select)
-  (sis-ism-lazyman-config nil t 'w32)
+  ;; (sis-ism-lazyman-config nil t 'w32)
   ;; (sis-ism-lazyman-config nil "rime" 'native)
 
   ;; enable the /cursor color/ mode
