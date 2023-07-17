@@ -143,4 +143,7 @@
   :mode "\\.lua$"
   :interpreter "lua")
 
+(use-package json-mode
+  :ensure t)
+
 (provide 'init-program-pkgs)
