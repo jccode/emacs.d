@@ -16,6 +16,7 @@
 (define-key ctrl-x-j-map (kbd "p g") 'gen-password)
 (define-key ctrl-x-j-map (kbd "b e") 'base64-encode-region)
 (define-key ctrl-x-j-map (kbd "b d") 'base64-decode-region)
+(define-key ctrl-x-j-map (kbd "i") 'insert-image-with-default-attributes)
 
 
 (use-package string-inflection

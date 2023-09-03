@@ -23,9 +23,9 @@ Inefficient implementation; don't use for large n."
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Prefix-Command-Arguments.html
 
 
-
-
-
-
-
+(defun insert-image-with-default-attributes (url caption)
+  "Insert an Org Mode image with default attributes."
+  (interactive "sImage URL: \nsCaption (optional): ")
+  (insert (format "#+CAPTION: %s\n#+ATTR_HTML: :width 100%%\n[[%s]]"
+		  caption url)))
 

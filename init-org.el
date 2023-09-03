@@ -121,5 +121,22 @@
 (use-package org-pomodoro
   :ensure t)
 
+
+;; org-download (https://github.com/abo-abo/org-download)
+;; use =org-download-clipboard= to paste clipboard images.
+(use-package org-download
+  :ensure t
+  :config
+  (setq-default org-download-image-dir "~/Pictures/org-download"
+		org-download-image-attr-list '("#+attr_html: :width 80% :align center" "#+attr_org: :width 100px"))
+  ;; org-download-image-html-width "100%"
+  ;; org-download-image-org-width "100px")
+  
+  ;; (org-download-screenshot-method "e:/IrfanView/i_view64.exe /capture=4 /convert=\"%s\"") 
+  ;; :bind
+  ;; ("C-S-y" . org-download-screenshot)
+  :init
+  (add-hook 'dired-mode-hook 'org-download-enable))
+
 ;; export
 (provide 'init-org)
