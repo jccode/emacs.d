@@ -108,4 +108,18 @@
   )
 
 
+(defun proxy-on ()
+  "Turn proxy on"
+  (interactive)
+  (setq url-proxy-services
+	'(("http" . "localhost:7890")
+	  ("https" . "localhost:7890")
+          )))
+
+(defun proxy-off ()
+  "Turn proxy off"
+  (interactive)
+  (setq url-proxy-services nil))
+
+
 (provide 'init-misc)

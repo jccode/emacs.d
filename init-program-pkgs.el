@@ -146,4 +146,7 @@
 (use-package json-mode
   :ensure t)
 
+(use-package nginx-mode
+  :ensure t)
+
 (provide 'init-program-pkgs)
