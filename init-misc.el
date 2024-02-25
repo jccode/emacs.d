@@ -13,7 +13,10 @@
 
 ;; chinese fonts
 (use-package cnfonts
-  :ensure t)
+  :ensure t
+  :config
+  (cnfonts-mode 1)
+  (setq cnfonts-use-face-font-rescale t))
 
 
 ;; chinese input method
